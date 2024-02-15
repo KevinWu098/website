@@ -22,13 +22,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <AOSInit />
             <body className={cn(inter.className, "text-gray-300")}>
+                <AOSInit />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
-                    disableTransitionOnChange
+                    // disableTransitionOnChange
                 >
                     <Header />
                     {children}

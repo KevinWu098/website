@@ -13,5 +13,5 @@ export const AOSInit = () => {
         });
     }, []);
 
-    return null;
+    return <></>;
 };
