@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(inter.className, "")}>
+            <body className={cn(inter.className, "text-gray-300")}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"

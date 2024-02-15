@@ -5,12 +5,10 @@ import { ThemeToggle } from "./ThemeToggle";
 const Header = () => {
     return (
         <>
-            <nav className="wrapper sticky flex-between inset-x-0 z-30 h-24">
-                <div>
-                    <ThemeToggle />
-                </div>
+            <nav className="wrapper absolute top-0 flex-between inset-x-0 z-30 h-24 bg-transparent">
+                <div />
 
-                <ul className="flex gap-x-6 font-bold">
+                <ul className="flex gap-x-6 font-bold text-lg">
                     <li>about</li>
                     <li>portfolio</li>
                     <li>contact</li>
