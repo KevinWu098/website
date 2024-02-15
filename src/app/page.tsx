@@ -5,7 +5,7 @@ export default function Home() {
         <main className="min-h-screen">
             <Hero />
 
-            <div>fkdajshfkjshd</div>
+            <div className="min-h-screen bg-[#242424]">fkdajshfkjshd</div>
         </main>
     );
 }

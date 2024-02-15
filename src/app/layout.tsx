@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 
 import "./globals.css";
 
+import { AOSInit } from "@/components/aos";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <AOSInit />
             <body className={cn(inter.className, "text-gray-300")}>
                 <ThemeProvider
                     attribute="class"

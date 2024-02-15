@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { ThemeToggle } from "./ThemeToggle";
+"use client";
 
 const Header = () => {
     return (
@@ -9,9 +7,30 @@ const Header = () => {
                 <div />
 
                 <ul className="flex gap-x-6 font-bold text-lg">
-                    <li>about</li>
-                    <li>portfolio</li>
-                    <li>contact</li>
+                    <li
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                        data-aos-once="true"
+                    >
+                        about
+                    </li>
+                    <li
+                        data-aos="fade-down"
+                        data-aos-duration="1100"
+                        data-aos-delay="300"
+                        data-aos-once="true"
+                    >
+                        portfolio
+                    </li>
+                    <li
+                        data-aos="fade-down"
+                        data-aos-duration="1200"
+                        data-aos-delay="300"
+                        data-aos-once="true"
+                    >
+                        contact
+                    </li>
                 </ul>
             </nav>
         </>
