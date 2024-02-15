@@ -24,15 +24,15 @@ export default function RootLayout({
         <html lang="en">
             <body className={cn(inter.className, "text-gray-300")}>
                 <AOSInit />
-                <ThemeProvider
+                {/* <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
                     // disableTransitionOnChange
-                >
-                    <Header />
-                    {children}
-                </ThemeProvider>
+                > */}
+                <Header />
+                {children}
+                {/* </ThemeProvider> */}
             </body>
         </html>
     );

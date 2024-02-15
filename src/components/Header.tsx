@@ -1,10 +1,12 @@
 "use client";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 const Header = () => {
     return (
         <>
             <nav className="wrapper absolute top-0 flex-between inset-x-0 z-30 h-24 bg-transparent">
-                <div />
+                <div>{/* <ThemeToggle /> */}</div>
 
                 <ul className="flex space-x-10 font-bold text-lg">
                     <li
