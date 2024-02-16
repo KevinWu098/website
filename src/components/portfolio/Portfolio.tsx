@@ -5,7 +5,7 @@ import Link from "next/link";
 import ConditionalWrapper from "@/lib/ConditionalWrapper";
 import { cn } from "@/lib/utils";
 import { GlobeIcon } from "lucide-react";
-import { SiDevpost, SiGithub, SiLinkedin } from "react-icons/si";
+import { SiDevpost, SiGithub } from "react-icons/si";
 
 const PORTFOLIO_ITEMS = [
     {
@@ -35,13 +35,40 @@ const PORTFOLIO_ITEMS = [
         github: "https://github.com/laurelin60/ge-z-frontend",
         site: "https://ge-z.vercel.app",
     },
+    // {
+    //     id: 4,
+    //     title: "AntAlmanac",
+    //     description: "Open-source course planner for UCI students",
+    //     image: "/portfolio/antalmanac_light.png",
+    //     github: "https://github.com/icssc/antalmanac",
+    //     site: "https://antalmanac.com",
+    // },
     {
-        id: 4,
-        title: "AntAlmanac",
-        description: "Open-source course planner for UCI students",
-        image: "/portfolio/antalmanac_light.png",
-        github: "https://github.com/icssc/antalmanac",
-        site: "https://antalmanac.com",
+        id: 5,
+        title: "Notive",
+        description:
+            "The note-taking app that helps you remember what you learned",
+        image: "/portfolio/notive.png",
+        win: "🥇 AI Innovation Challenge",
+        site: "https://ics.uci.edu/2024/02/09/ics-students-win-first-place-at-uci-antrepreneur-center-ai-innovation-challenge/",
+    },
+    {
+        id: 6,
+        title: "Mammo",
+        description: "Breast health, made actionable",
+        image: "/portfolio/mammo.jpg",
+        win: "🏅 Rose Hacks 2024",
+        github: "https://github.com/kevinwu098/mammo",
+        devpost: "https://devpost.com/software/mammo",
+    },
+    {
+        id: 7,
+        title: "PolitiCA",
+        description: "Making CA legislation accessible to anyone",
+        image: "/portfolio/politica.jpg",
+        win: "🏅 QWER Hacks 2024",
+        github: "https://github.com/laurelin60/politica",
+        devpost: "https://devpost.com/software/mammo",
     },
 ];
 
@@ -75,10 +102,10 @@ const Portfolio = () => {
                     {PORTFOLIO_ITEMS.map((item, index) => (
                         <ConditionalWrapper
                             /* Type converts string to boolean */
-                            condition={!!item.github}
+                            condition={!!item.github || !!item.site}
                             wrapper={(children: React.ReactNode) => (
                                 <Link
-                                    href={item.github ?? "/"}
+                                    href={item.github ?? item.site ?? "/"}
                                     referrerPolicy="no-referrer"
                                     target="_blank"
                                 >
@@ -94,7 +121,7 @@ const Portfolio = () => {
                                 onMouseOut={() => handleUnhover()}
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
-                                data-aos-delay={String(200 + item.id * 200)}
+                                data-aos-delay={String(200 + index * 200)}
                                 data-aos-once="true"
                                 data-aos-anchor="#aos-parent"
                             >
