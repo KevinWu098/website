@@ -11,22 +11,25 @@ const PORTFOLIO_ITEMS = [
         id: 1,
         title: "Agentic",
         description: "An accessibility tool, powered by AI large action model",
-        image: "/gray.svg",
+        image: "/portfolio/agentic.png",
+        github: "https://github.com/laurelin60/agentic",
     },
     {
         id: 2,
-        title: "Agentic",
-        description: "An accessibility tool, powered by AI large action model",
-        image: "/gray.svg",
+        title: "Life, Squared",
+        description: "Online, interactive life calendar",
+        image: "/portfolio/lifesquared.png",
+        github: "https://github.com/kevinwu098/lifesquared",
+        site: "https://lifesquared.vercel.app",
     },
     {
         id: 3,
-        title: "Agentic",
+        title: "GE-Z",
         description:
-            "An accessibility tool, powered by an AI large action model",
-        image: "/portfolio/antalmanac.png",
-        github: "https://github.com/icssc/antalmanac",
-        site: "https://antalmanac.com",
+            "The only reverse articulation search for California university students",
+        image: "/portfolio/gez.png",
+        github: "https://github.com/laurelin60/ge-z-frontend",
+        site: "https://ge-z.vercel.app",
     },
     {
         id: 4,
@@ -54,7 +57,16 @@ const Portfolio = () => {
     return (
         <div className="min-h-screen bg-[#242424]">
             <div className="wrapper py-32 flex-center flex-col">
-                <h2 className="text-7xl font-bold text-primary">portfolio</h2>
+                <h2
+                    className="text-7xl font-bold text-slate-300"
+                    data-aos="fade-right"
+                    data-aos-duration="600"
+                    data-aos-delay="200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
+                >
+                    portfolio
+                </h2>
                 <div className="grid grid-cols-2 gap-8 mt-12">
                     {PORTFOLIO_ITEMS.map((item, index) => (
                         <ConditionalWrapper
@@ -69,6 +81,7 @@ const Portfolio = () => {
                                     {children}
                                 </Link>
                             )}
+                            key={item.id}
                         >
                             <div
                                 className="overflow-hidden grid border-b-4 border-transparent hover:border-primary transition-all transform"
@@ -123,7 +136,7 @@ const Portfolio = () => {
                                     }
                                     className={cn(
                                         "w-[600px] h-80 p-4 rounded-xl col-start-1 row-start-1",
-                                        "bg-[image:var(--image-url)] bg-cover",
+                                        "bg-[image:var(--image-url)] bg-cover bg-top",
                                         "hover:brightness-[.275] hover:scale-105 hover:blur-[2px] transition-all duartion-300",
                                         hovered[index] &&
                                             "brightness-[.275] scale-105 blur-[2px] transition-all duration-300" /* Allows for overlaid links */,

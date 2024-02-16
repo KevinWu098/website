@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 import Links from "./Links";
 
 const Hero = () => {
@@ -15,7 +17,10 @@ const Hero = () => {
                         Hey! I'm
                     </span>
                     <h1
-                        className="font-bold text-[14rem] leading-none -ml-[15px] bg-green-600 bg-blend-overlay inline-block text-transparent bg-clip-text"
+                        className={cn(
+                            "font-bold text-[14rem] leading-none bg-green-600 bg-blend-overlay inline-block text-transparent bg-clip-text",
+                            /*"-ml-[15px]",*/
+                        )}
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="400"
