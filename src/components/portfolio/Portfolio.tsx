@@ -98,7 +98,10 @@ const Portfolio = () => {
                 >
                     portfolio
                 </h2>
-                <div className="grid grid-cols-2 gap-8 mt-12" id="aos-parent">
+                <div
+                    className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-8 mt-12"
+                    id="aos-parent"
+                >
                     {PORTFOLIO_ITEMS.map((item, index) => (
                         <ConditionalWrapper
                             /* Type converts string to boolean */
@@ -115,7 +118,7 @@ const Portfolio = () => {
                             key={item.id}
                         >
                             <div
-                                className="overflow-hidden grid border-b-4 border-transparent hover:border-primary transition-all transform"
+                                className="w-[300px] sm:w-[500px] lg:w-[600px] xl:w-[500px] 2xl:w-[600px] overflow-hidden grid border-b-4 border-transparent hover:border-primary transition-all transform"
                                 key={item.id}
                                 onMouseOver={() => handleHover(index)}
                                 onMouseOut={() => handleUnhover()}
@@ -127,7 +130,7 @@ const Portfolio = () => {
                             >
                                 {hovered[index] && (
                                     <div
-                                        className="w-[600px] col-start-1 row-start-1 z-10 pointer-events-none mt-auto px-12 py-8 space-y-4 text-white"
+                                        className="col-start-1 row-start-1 z-10 pointer-events-none mt-auto px-12 py-8 space-y-4 text-white"
                                         data-aos="fade"
                                         data-aos-duration="400"
                                     >
@@ -189,7 +192,7 @@ const Portfolio = () => {
                                         } as any
                                     }
                                     className={cn(
-                                        "w-[600px] h-80 p-4 rounded-xl col-start-1 row-start-1",
+                                        "h-40 sm:h-64 lg:h-80 xl:h-64 2xl:h-80 p-4 rounded-xl col-start-1 row-start-1",
                                         "bg-[image:var(--image-url)] bg-cover bg-top",
                                         "hover:brightness-[.275] hover:scale-105 hover:blur-[2px] transition-all duartion-300",
                                         hovered[index] &&
