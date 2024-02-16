@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import ConditionalWrapper from "@/lib/ConditionalWrapper";
 import { cn } from "@/lib/utils";
-import { Github, GlobeIcon } from "lucide-react";
+import { GlobeIcon } from "lucide-react";
+import { SiDevpost, SiGithub, SiLinkedin } from "react-icons/si";
 
 const PORTFOLIO_ITEMS = [
     {
@@ -12,7 +13,9 @@ const PORTFOLIO_ITEMS = [
         title: "Agentic",
         description: "An accessibility tool, powered by AI large action model",
         image: "/portfolio/agentic.png",
+        win: "🥇 SB Hacks X",
         github: "https://github.com/laurelin60/agentic",
+        devpost: "https://devpost.com/software/agentic",
     },
     {
         id: 2,
@@ -28,6 +31,7 @@ const PORTFOLIO_ITEMS = [
         description:
             "The only reverse articulation search for California university students",
         image: "/portfolio/gez.png",
+        win: "🥇 WebJam 2023",
         github: "https://github.com/laurelin60/ge-z-frontend",
         site: "https://ge-z.vercel.app",
     },
@@ -60,14 +64,14 @@ const Portfolio = () => {
                 <h2
                     className="text-7xl font-bold text-slate-300"
                     data-aos="fade-right"
-                    data-aos-duration="600"
+                    data-aos-duration="800"
                     data-aos-delay="200"
                     data-aos-easing="ease-in-out"
                     data-aos-once="true"
                 >
                     portfolio
                 </h2>
-                <div className="grid grid-cols-2 gap-8 mt-12">
+                <div className="grid grid-cols-2 gap-8 mt-12" id="aos-parent">
                     {PORTFOLIO_ITEMS.map((item, index) => (
                         <ConditionalWrapper
                             /* Type converts string to boolean */
@@ -88,6 +92,11 @@ const Portfolio = () => {
                                 key={item.id}
                                 onMouseOver={() => handleHover(index)}
                                 onMouseOut={() => handleUnhover()}
+                                data-aos="fade-up"
+                                data-aos-duration="1200"
+                                data-aos-delay={String(200 + item.id * 200)}
+                                data-aos-once="true"
+                                data-aos-anchor="#aos-parent"
                             >
                                 {hovered[index] && (
                                     <div
@@ -96,22 +105,30 @@ const Portfolio = () => {
                                         data-aos-duration="400"
                                     >
                                         <div className="flex flex-col space-y-2">
-                                            <h3 className="font-bold text-3xl">
-                                                {item.title}
+                                            <h3 className="font-bold text-3xl flex items-end space-x-2">
+                                                <span>{item.title}</span>
+                                                {item.win ? (
+                                                    <span>
+                                                        -{" "}
+                                                        <span className="text-yellow-400">
+                                                            {item.win}
+                                                        </span>
+                                                    </span>
+                                                ) : null}
                                             </h3>
                                             <p className="text-xl w-[90%]">
                                                 {item.description}
                                             </p>
                                         </div>
-                                        <div className="flex space-x-4">
+                                        <div className="flex items-center space-x-4">
                                             {item.github ? (
                                                 <Link
                                                     href={item.github}
                                                     referrerPolicy="no-referrer"
                                                     target="_blank"
-                                                    className="pointer-events-auto hover:text-primary"
+                                                    className="pointer-events-auto hover:text-primary text-2xl"
                                                 >
-                                                    <Github />
+                                                    <SiGithub />
                                                 </Link>
                                             ) : null}
                                             {item.site ? (
@@ -119,9 +136,19 @@ const Portfolio = () => {
                                                     href={item.site}
                                                     referrerPolicy="no-referrer"
                                                     target="_blank"
-                                                    className="pointer-events-auto hover:text-primary"
+                                                    className="pointer-events-auto hover:text-primary text-2xl"
                                                 >
                                                     <GlobeIcon />
+                                                </Link>
+                                            ) : null}
+                                            {item.devpost ? (
+                                                <Link
+                                                    href={item.devpost}
+                                                    referrerPolicy="no-referrer"
+                                                    target="_blank"
+                                                    className="pointer-events-auto hover:text-primary text-2xl"
+                                                >
+                                                    <SiDevpost />
                                                 </Link>
                                             ) : null}
                                         </div>
