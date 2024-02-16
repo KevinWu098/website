@@ -15,7 +15,7 @@ const Hero = () => {
                         Hey! I'm
                     </span>
                     <h1
-                        className="font-bold text-[14rem] leading-none -ml-[15px] bg-green-500 bg-blend-overlay inline-block text-transparent bg-clip-text"
+                        className="font-bold text-[14rem] leading-none -ml-[15px] bg-green-600 bg-blend-overlay inline-block text-transparent bg-clip-text"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="400"

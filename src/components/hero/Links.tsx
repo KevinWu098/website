@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 const Links = () => {
     return (
         <div
-            className="bg-gradient-to-r from-slate-700 to-slate-600 w-fit h-fit rounded-lg p-2 flex-center absolute -bottom-24 space-x-2 drop-shadow-[0_0px_16px_rgba(55,124,151,0.3)] mt-12"
+            className="bg-gradient-to-r from-slate-700 to-slate-600 w-fit h-fit rounded-lg p-2 flex-center absolute -bottom-24 space-x-2 drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)] mt-12"
             data-aos="fade"
             data-aos-duration="400"
             data-aos-delay="1400"
