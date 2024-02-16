@@ -118,7 +118,7 @@ const Portfolio = () => {
                             key={item.id}
                         >
                             <div
-                                className="w-[300px] sm:w-[500px] lg:w-[600px] xl:w-[500px] 2xl:w-[600px] overflow-hidden grid border-b-4 border-transparent hover:border-primary transition-all transform"
+                                className="w-[300px] sm:w-[500px] lg:w-[600px] xl:w-[500px] 2xl:w-[600px] overflow-hidden grid border-b-4 border-transparent hover:border-slate-300 transition-all transform"
                                 key={item.id}
                                 onMouseOver={() => handleHover(index)}
                                 onMouseOut={() => handleUnhover()}
