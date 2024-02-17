@@ -10,7 +10,7 @@ const Contact = () => {
                 <div className="px-8 md:px-0 space-y-8 md:space-y-16">
                     <div
                         className="space-y-3"
-                        data-aos="fade-left"
+                        data-aos="fade-up"
                         data-aos-duration="900"
                         data-aos-delay="100"
                         data-aos-easing="ease-in-out"
