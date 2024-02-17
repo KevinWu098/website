@@ -5,7 +5,10 @@ import Links from "./Links";
 
 const Hero = () => {
     return (
-        <div className="min-h-screen bg-[#191919] justify-center flex-col flex px-40 bg-cover">
+        <div
+            className="min-h-screen bg-[#191919] justify-center flex-col flex px-40 bg-cover"
+            id="hero"
+        >
             <div className="-mt-32 relative wrapper">
                 <div className="flex flex-col">
                     <span

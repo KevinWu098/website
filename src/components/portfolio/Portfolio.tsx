@@ -86,7 +86,7 @@ const Portfolio = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#242424]">
+        <div className="min-h-screen bg-[#242424]" id="portfolio">
             <div className="wrapper py-32 flex-center flex-col">
                 <h2
                     className="text-7xl font-bold"
