@@ -24,7 +24,7 @@ const Hero = () => {
                         <h1
                             className={cn(
                                 "font-bold bg-green-600 bg-blend-overlay inline-block text-transparent bg-clip-text",
-                                "text-7xl xs:text-8xl sm:text-[7.5rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] lg:leading-none leading-[1.1]",
+                                "text-[5rem] xs:text-8xl sm:text-[7.5rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] lg:leading-none leading-[1.1]",
                             )}
                             data-aos="fade-up"
                             data-aos-duration="1000"
@@ -34,7 +34,7 @@ const Hero = () => {
                             Kevin Wu
                         </h1>
                         <span
-                            className="text-xl sm:text-2xl lg:text-4xl font-bold flex justify-center xs:items-center space-y-2 xs:space-y-0 xs:space-x-4 flex-col xs:flex-row"
+                            className="text-2xl lg:text-4xl font-bold flex justify-center xs:items-center space-y-2 xs:space-y-0 xs:space-x-4 flex-col xs:flex-row"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="600"
