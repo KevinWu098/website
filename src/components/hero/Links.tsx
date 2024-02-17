@@ -63,7 +63,7 @@ const Links = () => {
                 ))}
             </div>
 
-            <div className="pt-8 -mb-44 xs:-mb-24 grid grid-cols-3 xs:grid-cols-4 md:hidden w-fit gap-4">
+            <div className="pt-8 -mb-44 xs:-mb-24 grid grid-cols-3 xxs:grid-cols-4 md:hidden w-fit gap-4">
                 {LINKS.map((item) => (
                     <Link
                         href={item.link}
