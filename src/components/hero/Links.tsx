@@ -43,7 +43,7 @@ const Links = () => {
         >
             <div className="bg-[#191919] w-fit h-fit rounded-lg p-2 items-center absolute -bottom-24 space-x-2 drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)] mt-12 hidden md:flex">
                 {LINKS.map((item, index) => (
-                    <div className="flex-center space-x-2">
+                    <div className="flex-center space-x-2" key={item.id}>
                         <Link
                             href={item.link}
                             referrerPolicy="no-referrer"
