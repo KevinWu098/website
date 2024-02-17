@@ -89,7 +89,7 @@ const Portfolio = () => {
         <div className="min-h-screen bg-[#242424]">
             <div className="wrapper py-32 flex-center flex-col">
                 <h2
-                    className="text-7xl font-bold text-slate-300"
+                    className="text-7xl font-bold"
                     data-aos="fade-right"
                     data-aos-duration="800"
                     data-aos-delay="200"
