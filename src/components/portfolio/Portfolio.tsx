@@ -89,7 +89,7 @@ const Portfolio = () => {
         <div className="min-h-screen bg-[#242424]" id="portfolio">
             <div className="wrapper py-32 flex-center flex-col">
                 <h2
-                    className="text-7xl font-bold"
+                    className="text-5xl md:text-7xl font-bold"
                     data-aos="fade-right"
                     data-aos-duration="800"
                     data-aos-delay="200"
@@ -99,7 +99,7 @@ const Portfolio = () => {
                     portfolio
                 </h2>
                 <div
-                    className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-8 mt-12"
+                    className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8 mt-12"
                     id="aos-parent"
                 >
                     {PORTFOLIO_ITEMS.map((item, index) => (
@@ -118,7 +118,10 @@ const Portfolio = () => {
                             key={item.id}
                         >
                             <div
-                                className="w-[300px] sm:w-[500px] lg:w-[600px] xl:w-[500px] 2xl:w-[600px] overflow-hidden grid border-b-4 border-transparent hover:border-slate-300 transition-all transform"
+                                className={cn(
+                                    "overflow-hidden grid border-b-4 border-[#242424] hover:border-slate-300 transition-all duration-1000",
+                                    "w-[300px] xs:w-[400px] sm:w-[500px] lg:w-[600px] xl:w-[500px] 2xl:w-[600px]",
+                                )}
                                 key={item.id}
                                 onMouseOver={() => handleHover(index)}
                                 onMouseOut={() => handleUnhover()}
@@ -130,12 +133,20 @@ const Portfolio = () => {
                             >
                                 {hovered[index] && (
                                     <div
-                                        className="col-start-1 row-start-1 z-10 pointer-events-none mt-auto px-12 py-8 space-y-4 text-white"
+                                        className={cn(
+                                            "col-start-1 row-start-1 z-10 pointer-events-none mt-auto space-y-4 text-white",
+                                            "px-6 sm:px-8 lg:px-12 xl:px-8 2xl:px-12 py-8",
+                                        )}
                                         data-aos="fade"
                                         data-aos-duration="400"
                                     >
                                         <div className="flex flex-col space-y-2">
-                                            <h3 className="font-bold text-3xl flex items-end space-x-2">
+                                            <h3
+                                                className={cn(
+                                                    "font-bold flex space-x-2 overflow-scroll",
+                                                    "text-xl sm:text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl",
+                                                )}
+                                            >
                                                 <span>{item.title}</span>
                                                 {item.win ? (
                                                     <span>
@@ -146,7 +157,12 @@ const Portfolio = () => {
                                                     </span>
                                                 ) : null}
                                             </h3>
-                                            <p className="text-xl w-[90%]">
+                                            <p
+                                                className={cn(
+                                                    "w-[90%]",
+                                                    "text-md sm:text-lg lg:text-xl xl:text-lg 2xl:text-xl",
+                                                )}
+                                            >
                                                 {item.description}
                                             </p>
                                         </div>
@@ -156,7 +172,7 @@ const Portfolio = () => {
                                                     href={item.github}
                                                     referrerPolicy="no-referrer"
                                                     target="_blank"
-                                                    className="pointer-events-auto hover:text-primary text-2xl"
+                                                    className="pointer-events-auto hover:text-primary text-xl lg:text-2xl"
                                                 >
                                                     <SiGithub />
                                                 </Link>
@@ -166,7 +182,7 @@ const Portfolio = () => {
                                                     href={item.site}
                                                     referrerPolicy="no-referrer"
                                                     target="_blank"
-                                                    className="pointer-events-auto hover:text-primary text-2xl"
+                                                    className="pointer-events-auto hover:text-primary text-xl lg:text-2xl"
                                                 >
                                                     <GlobeIcon />
                                                 </Link>
@@ -176,7 +192,7 @@ const Portfolio = () => {
                                                     href={item.devpost}
                                                     referrerPolicy="no-referrer"
                                                     target="_blank"
-                                                    className="pointer-events-auto hover:text-primary text-2xl"
+                                                    className="pointer-events-auto hover:text-primary text-xl lg:text-2xl"
                                                 >
                                                     <SiDevpost />
                                                 </Link>
@@ -192,7 +208,7 @@ const Portfolio = () => {
                                         } as any
                                     }
                                     className={cn(
-                                        "h-40 sm:h-64 lg:h-80 xl:h-64 2xl:h-80 p-4 rounded-xl col-start-1 row-start-1",
+                                        "h-40 xs:h-[13.3rem] sm:h-[16.6rem] lg:h-80 xl:h-[16.6rem] 2xl:h-80 p-4 rounded-xl col-start-1 row-start-1",
                                         "bg-[image:var(--image-url)] bg-cover bg-top",
                                         "hover:brightness-[.275] hover:scale-105 hover:blur-[2px] transition-all duartion-300",
                                         hovered[index] &&
