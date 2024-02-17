@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+import { Separator } from "../ui/separator";
 import Links from "./Links";
 
 const Hero = () => {
@@ -29,13 +30,18 @@ const Hero = () => {
                         Kevin Wu
                     </h1>
                     <span
-                        className="text-4xl font-bold"
+                        className="text-4xl font-bold flex items-center space-x-4"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="600"
                         data-aos-once="true"
                     >
-                        Software Developer | CS @ UCI
+                        <span>Software Developer</span>
+                        <Separator
+                            orientation="vertical"
+                            className="h-8 w-[2px]"
+                        />
+                        <span>CS @ UCI</span>
                     </span>
                 </div>
 
