@@ -13,7 +13,7 @@ const inter = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Kevin Wu",
-    description: "Software Keveloper",
+    description: "Software Keveloper - 💖",
 };
 
 export default function RootLayout({
