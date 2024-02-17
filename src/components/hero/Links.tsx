@@ -63,7 +63,7 @@ const Links = () => {
                 ))}
             </div>
 
-            <div className="pt-8 -mb-24 grid grid-cols-2 sm:grid-cols-4 md:hidden w-fit gap-4">
+            <div className="pt-8 -mb-24 grid grid-cols-2 xs:grid-cols-4 md:hidden w-fit gap-4">
                 {LINKS.map((item) => (
                     <Link href={item.link} key={item.id}>
                         <div className="w-fit p-4 rounded-lg drop-shadow-[0_0px_16px_rgba(35,196,93,0.125)] bg-[#191919] hover:scale-105 hover:drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)]">
