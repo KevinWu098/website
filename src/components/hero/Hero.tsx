@@ -9,7 +9,7 @@ const Hero = () => {
             className="min-h-screen bg-[#191919] justify-center flex-col flex bg-cover"
             id="hero"
         >
-            <div className="-mt-32 relative wrapper">
+            <div className="-mt-24 relative wrapper">
                 <div className="px-8 md:px-0">
                     <div className="flex flex-col">
                         <span
