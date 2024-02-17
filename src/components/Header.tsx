@@ -48,6 +48,7 @@ const Header = () => {
                             {/* <ThemeToggle /> */}
                             <Link href="#hero">
                                 <div
+                                    className="flex"
                                     data-aos="fade-down"
                                     data-aos-duration="1000"
                                     data-aos-once="true"
