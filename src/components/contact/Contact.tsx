@@ -8,15 +8,15 @@ const Contact = () => {
         <div className="bg-[#191919]" id="contact">
             <div className="wrapper py-20">
                 <div className="px-8 md:px-0 space-y-8 md:space-y-16">
-                    <div className="space-y-3">
-                        <div
-                            className="text-5xl md:text-7xl font-bold"
-                            data-aos="fade-left"
-                            data-aos-duration="500"
-                            data-aos-delay="100"
-                            data-aos-easing="ease-in-out"
-                            data-aos-once="true"
-                        >
+                    <div
+                        className="space-y-3"
+                        data-aos="fade-left"
+                        data-aos-duration="900"
+                        data-aos-delay="100"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="true"
+                    >
+                        <div className="text-5xl md:text-7xl font-bold">
                             let's chat!
                         </div>
                         <Separator className="w-36 h-1 bg-primary" />
@@ -27,8 +27,8 @@ const Contact = () => {
                             referrerPolicy="no-referrer"
                             target="_blank"
                             data-aos="fade-up"
-                            data-aos-duration="400"
-                            data-aos-delay="100"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
                             data-aos-easing="ease-in-out"
                             data-aos-once="true"
                         >
@@ -42,8 +42,8 @@ const Contact = () => {
                             referrerPolicy="no-referrer"
                             target="_blank"
                             data-aos="fade-up"
-                            data-aos-duration="400"
-                            data-aos-delay="300"
+                            data-aos-duration="1200"
+                            data-aos-delay="200"
                             data-aos-easing="ease-in-out"
                             data-aos-once="true"
                         >
