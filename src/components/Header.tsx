@@ -34,51 +34,55 @@ const Header = () => {
         <>
             <nav
                 className={cn(
-                    "wrapper top-0 fixed flex-between inset-x-0 z-30 h-24 w-full bg-transparent font-bold text-lg",
-                    showNav ? "flex" : "opacity-0 pointer-events-none",
+                    "top-0 fixed inset-x-0 z-30 h-24 w-full flex bg-transparent font-bold text-lg",
+                    showNav ? null : "opacity-0 pointer-events-none",
                     "transition-all duration-500",
+                    scrollPos > 96
+                        ? "bg-[#191919] w-[100vw] bg-opacity-50"
+                        : null,
                 )}
             >
-                <div>
-                    {/* <ThemeToggle /> */}
-                    <Link href="#hero">
-                        <p
+                <div className={cn("wrapper flex-between")}>
+                    <div>
+                        {/* <ThemeToggle /> */}
+                        <Link href="#hero">
+                            <p
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                data-aos-once="true"
+                            >
+                                @kevinwu098
+                            </p>
+                        </Link>
+                    </div>
+                    <ul className="flex space-x-10">
+                        {/* <li
                             data-aos="fade-down"
                             data-aos-duration="1000"
                             data-aos-once="true"
                         >
-                            @kevinwu098
-                        </p>
-                    </Link>
+                            about
+                        </li> */}
+                        <Link href="#portfolio">
+                            <li
+                                data-aos="fade-down"
+                                data-aos-duration="1200"
+                                data-aos-once="true"
+                            >
+                                portfolio
+                            </li>
+                        </Link>
+                        <Link href="#contact">
+                            <li
+                                data-aos="fade-down"
+                                data-aos-duration="1400"
+                                data-aos-once="true"
+                            >
+                                contact
+                            </li>
+                        </Link>
+                    </ul>
                 </div>
-
-                <ul className="flex space-x-10">
-                    {/* <li
-                        data-aos="fade-down"
-                        data-aos-duration="1000"
-                        data-aos-once="true"
-                    >
-                        about
-                    </li> */}
-                    <Link href="#portfolio">
-                        <li
-                            data-aos="fade-down"
-                            data-aos-duration="1200"
-                            data-aos-once="true"
-                        >
-                            portfolio
-                        </li>
-                    </Link>
-                    <Link href="#contact">
-                        <li
-                            data-aos="fade-down"
-                            data-aos-duration="1400"
-                            data-aos-once="true"
-                        >
-                            contact
-                        </li>
-                    </Link>
-                </ul>
             </nav>
         </>
     );
