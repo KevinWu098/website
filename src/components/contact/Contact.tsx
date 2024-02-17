@@ -21,7 +21,7 @@ const Contact = () => {
                         </div>
                         <Separator className="w-36 h-1 bg-primary" />
                     </div>
-                    <div className="flex justify-start space-x-12 text-2xl md:text-4xl font-bold">
+                    <div className="flex flex-col xs:flex-row justify-start items-start text-left gap-y-2 xs:space-x-6 md:space-x-12 text-2xl md:text-4xl font-bold">
                         <Link
                             href="https://linkedin.com/in/kevinwu098"
                             referrerPolicy="no-referrer"
@@ -32,7 +32,7 @@ const Contact = () => {
                             data-aos-easing="ease-in-out"
                             data-aos-once="true"
                         >
-                            <div className="flex-center space-x-3 hover:scale-105">
+                            <div className="flex-center space-x-3 hover:scale-105 w-full">
                                 <FaLinkedin className="w-6 md:w-8 h-6 md:h-8 text-slate-300 bg-blend-lighten" />
                                 <p>LinkedIn</p>
                             </div>
@@ -47,7 +47,7 @@ const Contact = () => {
                             data-aos-easing="ease-in-out"
                             data-aos-once="true"
                         >
-                            <div className="flex-center space-x-3 hover:scale-105">
+                            <div className="flex-center space-x-3 hover:scale-105 w-full">
                                 <FaEnvelope className="w-6 md:w-7 h-6 md:h-7 text-slate-300 bg-blend-lighten" />
                                 <p>Email</p>
                             </div>

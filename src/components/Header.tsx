@@ -34,7 +34,7 @@ const Header = () => {
         <>
             <nav
                 className={cn(
-                    "top-0 fixed inset-x-0 z-30 h-24 w-full flex bg-transparent font-bold text-lg",
+                    "top-0 fixed inset-x-0 z-30 h-24 w-full max-w-[100vw] flex bg-transparent font-bold text-lg",
                     showNav ? null : "opacity-0 pointer-events-none",
                     "transition-all duration-500",
                     scrollPos > 96
@@ -47,16 +47,17 @@ const Header = () => {
                         <div>
                             {/* <ThemeToggle /> */}
                             <Link href="#hero">
-                                <p
+                                <div
                                     data-aos="fade-down"
                                     data-aos-duration="1000"
                                     data-aos-once="true"
                                 >
-                                    @kevinwu098
-                                </p>
+                                    @
+                                    <p className="hidden md:flex">kevinwu098</p>
+                                </div>
                             </Link>
                         </div>
-                        <ul className="flex space-x-10">
+                        <ul className="flex space-x-5 md:space-x-10">
                             {/* <li
                                 data-aos="fade-down"
                                 data-aos-duration="1000"
