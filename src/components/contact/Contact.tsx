@@ -6,7 +6,7 @@ import { Separator } from "../ui/separator";
 const Contact = () => {
     return (
         <div className="bg-[#191919]">
-            <div className="wrapper py-24 space-y-16">
+            <div className="wrapper py-20 space-y-16">
                 <div className="space-y-3">
                     <div className="text-7xl font-bold">let's chat!</div>
                     <Separator className="w-36 h-1 bg-primary" />

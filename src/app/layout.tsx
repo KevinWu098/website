@@ -4,6 +4,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 
 import { AOSInit } from "@/components/aos";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(inter.className, "text-gray-300")}>
+            <body className={cn(inter.className, "text-slate-300")}>
                 <AOSInit />
                 {/* <ThemeProvider
                     attribute="class"
@@ -32,6 +33,7 @@ export default function RootLayout({
                 > */}
                 <Header />
                 {children}
+                <Footer />
                 {/* </ThemeProvider> */}
             </body>
         </html>
