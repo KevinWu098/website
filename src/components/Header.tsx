@@ -42,46 +42,48 @@ const Header = () => {
                         : null,
                 )}
             >
-                <div className={cn("wrapper flex-between")}>
-                    <div>
-                        {/* <ThemeToggle /> */}
-                        <Link href="#hero">
-                            <p
+                <div className={cn("wrapper")}>
+                    <div className="flex-between h-full px-8 md:px-0">
+                        <div>
+                            {/* <ThemeToggle /> */}
+                            <Link href="#hero">
+                                <p
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-once="true"
+                                >
+                                    @kevinwu098
+                                </p>
+                            </Link>
+                        </div>
+                        <ul className="flex space-x-10">
+                            {/* <li
                                 data-aos="fade-down"
                                 data-aos-duration="1000"
                                 data-aos-once="true"
                             >
-                                @kevinwu098
-                            </p>
-                        </Link>
+                                about
+                            </li> */}
+                            <Link href="#portfolio">
+                                <li
+                                    data-aos="fade-down"
+                                    data-aos-duration="1200"
+                                    data-aos-once="true"
+                                >
+                                    portfolio
+                                </li>
+                            </Link>
+                            <Link href="#contact">
+                                <li
+                                    data-aos="fade-down"
+                                    data-aos-duration="1400"
+                                    data-aos-once="true"
+                                >
+                                    contact
+                                </li>
+                            </Link>
+                        </ul>
                     </div>
-                    <ul className="flex space-x-10">
-                        {/* <li
-                            data-aos="fade-down"
-                            data-aos-duration="1000"
-                            data-aos-once="true"
-                        >
-                            about
-                        </li> */}
-                        <Link href="#portfolio">
-                            <li
-                                data-aos="fade-down"
-                                data-aos-duration="1200"
-                                data-aos-once="true"
-                            >
-                                portfolio
-                            </li>
-                        </Link>
-                        <Link href="#contact">
-                            <li
-                                data-aos="fade-down"
-                                data-aos-duration="1400"
-                                data-aos-once="true"
-                            >
-                                contact
-                            </li>
-                        </Link>
-                    </ul>
                 </div>
             </nav>
         </>
