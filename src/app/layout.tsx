@@ -23,7 +23,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(inter.className, "text-slate-300")}>
+            <body
+                className={cn(
+                    inter.className,
+                    "text-slate-300 max-w-[100vw] overflow-x-hidden",
+                )}
+            >
                 <AOSInit />
                 {/* <ThemeProvider
                     attribute="class"

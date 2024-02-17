@@ -13,7 +13,7 @@ const Hero = () => {
                 <div className="px-8 md:px-0">
                     <div className="flex flex-col">
                         <span
-                            className="font-bold text-xl lg:text-2xl"
+                            className="font-bold text-lg sm:text-xl lg:text-2xl"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="300"
@@ -24,7 +24,7 @@ const Hero = () => {
                         <h1
                             className={cn(
                                 "font-bold bg-green-600 bg-blend-overlay inline-block text-transparent bg-clip-text",
-                                "text-9xl lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] leading-none",
+                                "text-7xl xs:text-8xl sm:text-[7.5rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[14rem] lg:leading-none leading-[1.1]",
                             )}
                             data-aos="fade-up"
                             data-aos-duration="1000"
@@ -34,18 +34,28 @@ const Hero = () => {
                             Kevin Wu
                         </h1>
                         <span
-                            className="text-2xl lg:text-4xl font-bold flex items-center space-x-4"
+                            className="text-xl sm:text-2xl lg:text-4xl font-bold flex justify-center xs:items-center space-y-2 xs:space-y-0 xs:space-x-4 flex-col xs:flex-row"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="600"
                             data-aos-once="true"
                         >
-                            <span>Fullstack Developer</span>
+                            <span className="w-full xs:w-fit shrink-0 text-left">
+                                Fullstack Developer
+                            </span>
                             <Separator
-                                orientation="vertical"
-                                className="h-6 lg:h-8 w-[2px]"
+                                orientation="horizontal"
+                                className="w-12 h-[2px] xs:hidden"
                             />
-                            <span>CS @ UCI</span>
+                            <div className="flex items-center xs:space-x-4 w-full">
+                                <Separator
+                                    orientation="vertical"
+                                    className="h-6 lg:h-8 w-[2px] hidden xs:flex"
+                                />
+                                <span className="w-full text-left">
+                                    CS @ UCI
+                                </span>
+                            </div>
                         </span>
                     </div>
 
