@@ -35,7 +35,7 @@ const Header = () => {
             <nav
                 className={cn(
                     "top-0 fixed inset-x-0 z-30 h-24 w-full max-w-[100vw] flex bg-transparent font-bold text-lg",
-                    showNav ? null : "opacity-0 pointer-events-none",
+                    showNav || scrollPos <= 96 ? null : "opacity-0 pointer-events-none",
                     "transition-all duration-500",
                     scrollPos > 96
                         ? "bg-[#191919] w-[100vw] bg-opacity-50"
