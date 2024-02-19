@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 import { Separator } from "../ui/separator";
 import Links from "./Links";
@@ -62,6 +64,16 @@ const Hero = () => {
                     <Links />
                 </div>
             </div>
+
+            <Link href="#portfolio" className="absolute bottom-24 self-center ">
+                <ChevronDown
+                    className="text-primary animate-bounce"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    data-aos-delay="1800"
+                    data-aos-once="true"
+                />
+            </Link>
         </div>
     );
 };
