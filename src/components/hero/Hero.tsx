@@ -11,7 +11,7 @@ const Hero = () => {
             className="min-h-screen bg-[#191919] justify-center flex-col flex bg-cover"
             id="hero"
         >
-            <div className="-mt-36 xs:-mt-24 relative wrapper">
+            <div className="-mt-36 xs:-mt-36 relative wrapper">
                 <div className="px-8 md:px-0">
                     <div className="flex flex-col">
                         <span
@@ -64,16 +64,6 @@ const Hero = () => {
                     <Links />
                 </div>
             </div>
-
-            <Link href="#portfolio" className="absolute bottom-24 self-center ">
-                <ChevronDown
-                    className="text-primary animate-bounce"
-                    data-aos="fade-up"
-                    data-aos-duration="700"
-                    data-aos-delay="1800"
-                    data-aos-once="true"
-                />
-            </Link>
         </div>
     );
 };

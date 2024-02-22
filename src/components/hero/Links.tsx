@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ChevronDown } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoDocumentText } from "react-icons/io5";
 import { SiDevpost, SiGithub } from "react-icons/si";
@@ -35,48 +36,60 @@ const LINKS = [
 const Links = () => {
     return (
         <div
-            data-aos="fade"
-            data-aos-duration="400"
-            data-aos-delay="1400"
-            data-aos-once="true"
-            data-aos-easing="ease-in-out"
+            // data-aos="fade"
+            // data-aos-duration="400"
+            // data-aos-delay="1400"
+            // data-aos-once="true"
+            // data-aos-easing="ease-in-out"
+            className="relative flex justify-center"
         >
-            <div className="bg-[#191919] w-fit h-fit rounded-lg p-2 items-center absolute -bottom-24 space-x-2 drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)] mt-12 hidden md:flex">
-                {LINKS.map((item, index) => (
-                    <div className="flex-center space-x-2" key={item.id}>
+            <div className="mr-auto">
+                <div className="bg-[#191919] w-fit h-fit rounded-lg p-2 items-center absolute -bottom-24 space-x-2 drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)] mt-12 hidden md:flex">
+                    {LINKS.map((item, index) => (
+                        <div className="flex-center space-x-2" key={item.id}>
+                            <Link
+                                href={item.link}
+                                referrerPolicy="no-referrer"
+                                target="_blank"
+                            >
+                                <Button className="bg-transparent hover:bg-white hover:bg-opacity-5 text-xl">
+                                    {item.text}
+                                </Button>
+                            </Link>
+                            {index + 1 != LINKS.length ? (
+                                <Separator
+                                    orientation="vertical"
+                                    className="h-6 w-[1px]"
+                                />
+                            ) : null}
+                        </div>
+                    ))}
+                </div>
+                <div className="pt-8 -mb-44 xs:-mb-24 grid grid-cols-3 xxs:grid-cols-4 md:hidden w-fit gap-4">
+                    {LINKS.map((item) => (
                         <Link
                             href={item.link}
                             referrerPolicy="no-referrer"
                             target="_blank"
+                            key={item.id}
                         >
-                            <Button className="bg-transparent hover:bg-white hover:bg-opacity-5 text-xl">
-                                {item.text}
-                            </Button>
+                            <div className="w-fit p-4 rounded-lg drop-shadow-[0_0px_16px_rgba(35,196,93,0.125)] bg-[#191919] hover:scale-105 hover:drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)]">
+                                {item.icon}
+                            </div>
                         </Link>
-                        {index + 1 != LINKS.length ? (
-                            <Separator
-                                orientation="vertical"
-                                className="h-6 w-[1px]"
-                            />
-                        ) : null}
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
 
-            <div className="pt-8 -mb-44 xs:-mb-24 grid grid-cols-3 xxs:grid-cols-4 md:hidden w-fit gap-4">
-                {LINKS.map((item) => (
-                    <Link
-                        href={item.link}
-                        referrerPolicy="no-referrer"
-                        target="_blank"
-                        key={item.id}
-                    >
-                        <div className="w-fit p-4 rounded-lg drop-shadow-[0_0px_16px_rgba(35,196,93,0.125)] bg-[#191919] hover:scale-105 hover:drop-shadow-[0_0px_16px_rgba(35,196,93,0.25)]">
-                            {item.icon}
-                        </div>
-                    </Link>
-                ))}
-            </div>
+            <Link href="#portfolio" className="absolute -bottom-60 self-center">
+                <ChevronDown
+                    className="text-primary animate-bounce"
+                    // data-aos="fade-up"
+                    // data-aos-duration="700"
+                    // data-aos-delay="1800"
+                    // data-aos-once="true"
+                />
+            </Link>
         </div>
     );
 };
