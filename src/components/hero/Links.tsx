@@ -36,11 +36,11 @@ const LINKS = [
 const Links = () => {
     return (
         <div
-            // data-aos="fade"
-            // data-aos-duration="400"
-            // data-aos-delay="1400"
-            // data-aos-once="true"
-            // data-aos-easing="ease-in-out"
+            data-aos="fade"
+            data-aos-duration="400"
+            data-aos-delay="1400"
+            data-aos-once="true"
+            data-aos-easing="ease-in-out"
             className="relative flex justify-center"
         >
             <div className="mr-auto">
@@ -84,10 +84,10 @@ const Links = () => {
             <Link href="#portfolio" className="absolute -bottom-60 self-center">
                 <ChevronDown
                     className="text-primary animate-bounce"
-                    // data-aos="fade-up"
-                    // data-aos-duration="700"
-                    // data-aos-delay="1800"
-                    // data-aos-once="true"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    data-aos-delay="1800"
+                    data-aos-once="true"
                 />
             </Link>
         </div>
