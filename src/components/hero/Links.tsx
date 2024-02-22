@@ -81,7 +81,7 @@ const Links = () => {
                 </div>
             </div>
 
-            <Link href="#portfolio" className="absolute -bottom-60 self-center">
+            <Link href="#portfolio" className="absolute -bottom-48 self-center">
                 <ChevronDown
                     className="text-primary animate-bounce"
                     data-aos="fade-up"
